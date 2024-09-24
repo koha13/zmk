@@ -1,0 +1,6 @@
+if SHIELD_TANUKI
+
+config ZMK_KEYBOARD_NAME
+    default "tanuki"
+
+endif
