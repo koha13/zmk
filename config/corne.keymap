@@ -32,6 +32,13 @@
             timeout-ms = <50>;
             layers = <0>;
         };
+
+        esc2 {
+            bindings = <&kp ESC>;
+            key-positions = <15 16>;
+            timeout-ms = <50>;
+            layers = <0>;
+        };
     };
 
     keymap {
@@ -59,8 +66,8 @@
             bindings = <
 &kp LC(LA(LG(T)))  &kp N1    &kp N2        &kp N3           &kp N4         &kp N5        &kp N6    &kp N7         &kp N8       &kp N9     &kp N0  &kp BSPC
 &kp LC(LSHFT)      &kp PLUS  &kp KP_MINUS  &kp KP_MULTIPLY  &kp KP_DIVIDE  &kp KP_DOT    &kp LEFT  &kp DOWN       &kp UP       &kp RIGHT  &trans  &trans
-&kp LSHFT          &trans    &trans        &trans           &trans         &trans        &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP  &kp END    &trans  &kp CAPS
-                                           &kp LCTRL        &mo 3          &kp SPACE     &kp RET   &trans         &kp RALT
+&kp LEFT_ALT       &trans    &trans        &trans           &trans         &trans        &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP  &kp END    &trans  &kp CAPS
+                                           &kp LCTRL        &mo 3          &kp SPACE     &kp RET   &trans         &kp ESC
             >;
         };
 
