@@ -41,6 +41,26 @@
         };
     };
 
+    macros {
+        appswitch: appswitch {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp TAB>,
+                <&macro_tap>,
+                <&sk LEFT_ALT>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "APPSWITCH";
+            tap-ms = <40>;
+            wait-ms = <100>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -55,10 +75,10 @@
 
         lower_layer {
             bindings = <
-&kp GRAVE  &kp AMPS  &kp ASTRK    &kp PIPE   &kp LPAR  &kp RPAR     &kp PLUS  &kp EQUAL  &kp MINUS  &kp UNDER  &kp GRAVE      &kp DELETE
-&kp TILDE  &kp DLLR  &kp PERCENT  &kp CARET  &kp LBRC  &kp RBRC     &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &kp TILDE      &caps_word
-&kp LSHFT  &kp EXCL  &kp AT       &kp HASH   &kp LBKT  &kp RBKT     &kp F13   &kp F14    &kp F15    &kp F16    &kp BACKSLASH  &trans
-                                  &kp LCTRL  &trans    &kp SPACE    &kp RET   &mo 3      &kp RALT
+&kp GRAVE   &kp AMPS  &kp ASTRK    &kp PIPE   &kp LPAR  &kp RPAR     &kp PLUS  &kp EQUAL  &kp MINUS  &kp UNDER  &kp GRAVE      &kp DELETE
+&kp TILDE   &kp DLLR  &kp PERCENT  &kp CARET  &kp LBRC  &kp RBRC     &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &kp TILDE      &caps_word
+&appswitch  &kp EXCL  &kp AT       &kp HASH   &kp LBKT  &kp RBKT     &kp F13   &kp F14    &kp F15    &kp F16    &kp BACKSLASH  &trans
+                                   &kp LCTRL  &trans    &kp SPACE    &kp RET   &mo 3      &kp RALT
             >;
         };
 
