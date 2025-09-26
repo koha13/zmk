@@ -2,12 +2,8 @@ on:
   workflow_dispatch:
   push:
     paths:
-      - "config/*.keymap"
-      - "config/*.dtsi"
-      - "config/boards/shields/*.conf"
-      - "config/boards/shields/*.overlay"
-      - "config/boards/*/*/*.keymap"
+      - "config/**"
 
 jobs:
   build:
-    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+    uses: petejohanson/zmk/.github/workflows/build-user-config.yml@core/zephyr-3.5-update
